@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta  http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta  name="description" content="Мой первый сайт с самописным MVC движком" />
+    <meta  name="keywords" content="тестовый сайт, MVC, MVC движок" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Site witch Bootstrap</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Roboto+Mono:500|Ubuntu+Condensed" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+    <header id="head">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-header-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/logo.png" alt="METROLAB"></a>
+                    <form class="form-inline navbar-form navbar-left" name="auth" action="" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="login" placeholder="Логпн">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="Пароль">
+                        </div>
+                        <button type="submit" class="btn btn-default"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>Войти</button>
+                        <div id="auth-data-reset" class="form-group"><a href="#">Забыли пароль?</a><a href="#">Забыли логин?</a></div>
+                        <div id="registration"><a href="#"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>Зарегестрироватся</a></div>
+                    </form>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse row" id="site-header-navbar-collapse">
+                    <div class="col-sm-4 col-md-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Поиск...">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-9">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="btn btn-default active" href="#" role="button" >главная</a></li>
+                            <li class="dropdown"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown"  data-target="#" href="/selectEquipment/path/to/selectController"  role="button">подбор оборудования<b class="caret"></b></a><!--href="#selectEquipmentMenu"-->
+                                <ul id="#selectEquipmentMenu" class="dropdown-menu menu-head">
+                                    <li><a href="#">подобрать оборудование</a></li>
+                                    <li><a href="#">каталог оборудования</a></li>
+                                    <li><a href="#">группы оборудования</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="btn btn-default" ref="#" role="button">тестовый сайт</a></li>
+                        </ul>
+                    </div>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <section id="slider"></section>
+    <section id="content">
+        <main class="container equipment-group-list">
+            <header class="page-header">
+                <h1>Группы оборудования</h1>
+            </header>
+            <section id="center">
+                <div class="row">
+                    <div class="col-sm-5 col-lg-4 col-sm-push-7 col-lg-push-8">
+                        <a role="button" href="#" class="btn btn-default ml-addbtn btn-block"><i class="fa fa-plus fa-lg" aria-hidden="true"></i>Добавить <br class="visible-sm"/>группу оборудования</a>
+                            <div class="panel panel-warning">
+                                <div class="panel-heading"><h3 class="panel-title">Единицы измерения(Ед. Изм.)</h3></div>
+                                <div class="table-responsive">
+                                    <table id="equipmentGroupUnitList" class="table table-condensed">
+                                        <thead>
+                                        <tr class="ml-tablehead-colcaption">
+                                            <th class="ml-tablehead-clicked"><span>#</span><i class="fa fa-sort-amount-asc" aria-hidden="true"></i></th>
+                                            <th class="ml-tablehead-clicked"><span>Название</span><i class="fa fa-sort-amount-asc" aria-hidden="true"></i></span></th>
+                                            <th>Коэфициент приведения<br class="hidden-xs"/> к базовой Ед. Изм.</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Бар</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>мБар</td>
+                                            <td>0.001</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-sm-7 col-lg-8 col-sm-pull-5 col-lg-pull-4">
+                        <div class="panel panel-warning">
+                           <div class="panel-heading visible-xs"><h3 class="panel-title">Группы оборудования</h3></div>
+                            <div class="table table-responsive">
+                                <table class="table table-condensed">
+                                    <thead>
+                                    <tr class="ml-tablehead-colcaption">
+                                        <th class="ml-tablehead-clicked"><span>#</span><i class="fa fa-sort-amount-asc" aria-hidden="true"></i></th>
+                                        <th class="ml-tablehead-clicked"><span>Группа</span><i class="fa fa-sort-amount-asc" aria-hidden="true"></i></th>
+                                        <th>Базовая единица измерения</th>
+                                        <th>Описание</th>
+                                        <th class="ml-tablehead-action"></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="ml-tablebodyrow-action">
+                                        <td>1</td>
+                                        <td><a href="#">Давление</a></td>
+                                        <td>Бар</td>
+                                        <td>Какое-то описание</td>
+                                        <td class="ml-tablebody-remove"><i class="fa fa-times fa-2x" aria-hidden="true"></i></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </section>
+    <footer id="footer">Copyright &copy 2010-2017. Разработал Манузин Антон <i class="fa fa-arrow-right" aria-hidden="true"></i> "CSeal" 19mann84@gmail.com. Все права защищены.</footer>
+</div>
+<script src="../js/lib/jquery-3.2.1.js"></script>
+<script src="../js/lib/jquery-migrate-1.4.1.min.js"></script>
+<script src="../js/lib/jquery-migrate-3.0.0.min.js"></script>
+<script src="../js/lib/bootstrap.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

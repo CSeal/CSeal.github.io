@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta  http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta  name="description" content="Мой первый сайт с самописным MVC движком" />
+    <meta  name="keywords" content="тестовый сайт, MVC, MVC движок" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Site witch Bootstrap</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Roboto+Mono:500|Ubuntu+Condensed" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+    <header id="head">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-header-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/logo.png" alt="METROLAB"></a>
+                    <form class="form-inline navbar-form navbar-left" name="auth" action="" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="login" placeholder="Логпн">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="Пароль">
+                        </div>
+                        <button type="submit" class="btn btn-default"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>Войти</button>
+                        <div id="auth-data-reset" class="form-group"><a href="#">Забыли пароль?</a><a href="#">Забыли логин?</a></div>
+                        <div id="registration"><a href="#"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>Зарегестрироватся</a></div>
+                    </form>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse row" id="site-header-navbar-collapse">
+                    <div class="col-sm-4 col-md-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Поиск...">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-9">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="btn btn-default active" href="#" role="button" >главная</a></li>
+                            <li class="dropdown"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown"  data-target="#" href="/selectEquipment/path/to/selectController"  role="button">подбор оборудования<b class="caret"></b></a><!--href="#selectEquipmentMenu"-->
+                                <ul id="#selectEquipmentMenu" class="dropdown-menu menu-head">
+                                    <li><a href="#">подобрать оборудование</a></li>
+                                    <li><a href="#">каталог оборудования</a></li>
+                                    <li><a href="#">группы оборудования</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="btn btn-default" ref="#" role="button">тестовый сайт</a></li>
+                        </ul>
+                    </div>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <section id="slider"></section>
+    <section id="content">
+        <main class="container equipment-card">
+            <header class="page-header">
+                <h1>карточка оборудования "Additel 681"(ID - 123)</h1>
+            </header>
+            <section id="center">
+                <!-- Nav tabs nav-pills nav-tabs-->
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#equBasicInfo" data-toggle="tab">Основная информация</a></li>
+                    <li><a href="#equMeasureError" data-toggle="tab">Погрешности</a></li>
+                    <li><a href="#equOptionCharacteristic" data-toggle="tab">Опции и Характеристики</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="equBasicInfo">
+                        <form  name="equBasicInfo" action="" method="post" role="form">
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label for="equipmentName">Название оборудования</label>
+                                    <input  class="form-control" id="equipmentName" name="equipmentName"
+                                           placeholder="Additel" value="Additel 681" required>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="equipmentGroup">Группа оборудования</label>
+                                    <select id="equipmentGroup" name="equipmentGroup" class="form-control" required>
+                                        <option value="1" selected>Давление</option>
+                                        <option value="2">Электричество</option>
+                                        <option value="3">Температура</option>
+                                        <option value="4">Влажность</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="equipmentMonufacture">Производитель</label>
+                                    <select id="equipmentMonufacture" name="quipmentMonufacture" class="form-control" required>
+                                        <option value="1" selected>Additel</option>
+                                        <option value="2">GE Druck</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label for="ourSiteLink">Ссылка на сайт фирмы</label>
+                                    <input type="url" name="ourSiteLink" class="form-control" id="ourSiteLink"
+                                           placeholder="http://ourSiteLink.net">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="monufactureSiteLink">Ссылка на сайт производителя</label>
+                                    <input type="url" name="monufactureSiteLink" class="form-control"
+                                           id="monufactureSiteLink" placeholder="http://monufactureSiteLink.net">
+                                </div>
+                            </div>
+                            <h3>Приделы измерения</h3>
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label for="measuringLimitMin">Нижний предел</label>
+                                    <input type="number" name="measuringLimitMin" class="form-control"
+                                           id="measuringLimitMin" placeholder="-1" min="-1" required>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="measuringLimitMax">Верхний предел</label>
+                                    <input type="number" name="measuringLimitMax" class="form-control"
+                                           id="measuringLimitMax" placeholder="2800" min="1" required>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="equipmentGroupUnit">Единицы измерения</label>
+                                    <select id="equipmentGroupUnit" name="equipmentGroupUnit" class="form-control" required>
+                                        <option value="1" selected>Бар</option>
+                                        <option value="2">мБар</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-control-btn">
+                                <div class="form-group col-sm-2">
+                                    <button type="button" id="equBasicInfoSave" class="btn btn-info btn-block">Сохранить</button>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <button type="submit"  id="equBasicInfoSaveAndExit" class="btn btn-primary btn-block">Сохранить и закрыть</button>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <button type="button" id="equCardDelete" class="btn btn-danger btn-block">Удалить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="equMeasureError">
+                        <div class="panel panel-warning">
+                        <!-- Default panel contents -->
+                            <div class="panel-heading"><h3 class="panel-title">Добавить\Изменить значение погрешности и диапозона измерения</h3></div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="form-group col-sm-4">
+                                        <label for="measuringStart">Диапозон измерения:<br class="hidden-xs hidden-lg"/>Начальное значение</label>
+                                        <input type="number" name="measuringStart" id="measuringStart" placeholder="0" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <label for="measuringEnd">Диапозон измерения:<br class="hidden-xs hidden-lg"/>Конечное значение</label>
+                                        <input type="number" name="measuringEnd" id="measuringEnd" placeholder="1000" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <label for="measurementError">Погрешноесть<br class="hidden-xs hidden-lg"/>измерения</label>
+                                        <input name="measurementError" id="measurementError" placeholder="0.5%ВПИ + 0.2%ИВ" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-5 col-md-4 col-sm-offset-1 col-md-offset-2">
+                                        <button type="button" id="newMeasureError" class="btn btn-success btn-block">Добавить новую запись</button>
+                                    </div>
+                                    <div class="form-group col-sm-5 col-md-4">
+                                        <button type="button" id="editMeasureError" class="btn btn-info btn-block">Редактировать выделенную запись</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- Table -->
+                             <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr class="ml-tablehead-colcaption"><th>Диапозон измерения<br/>Начальное значение</th><th>Диапозон измерения<br/>Конечное значение</th><th>Единицы измерения</th><th>Погрешность измерения</th><th class="ml-tablehead-action"></th></tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr><td>-1</td><td>1000</td><td>бар</td><td>0.02%ВПИ</td><td class="ml-tablebody-remove"><i class="fa fa-times fa-2x" aria-hidden="true"></i></td></tr>
+                                    </tbody>
+                                </table>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="equOptionCharacteristic">
+                        <div class="panel panel-success">
+                            <div class="panel-heading"><h3 class="panel-title">Базовые характеристики</h3></div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-3"><h4>Исполнение</h4></div>
+                                    <div class="col-sm-3"><select class="ml-charact-value" multiple size="3" title="Список множественного выбора. Для выбора нескольких значений списка применяются клавиши Ctrl совместно с курсором мыши."><option value="1" selected>Стандартное</option>
+                                                                    <option value="2">Взрывозащищенное</option>
+                                                                    <option value="3">Искробезопасное</option></select></div>
+                                    <div class="col-sm-3"><h4>Материал корпуса</h4></div>
+                                    <div class="col-sm-3"><select class="ml-charact-value" multiple size="3" title="Список множественного выбора. Для выбора нескольких значений списка применяются клавиши Ctrl совместно с курсором мыши."><option value="1" selected>Пластик</option>
+                                        <option value="2">Металл</option>
+                                        </select></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading"><h3 class="panel-title">Дополнительные опции</h3></div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="ml-opt-box col-sm-6 clearfix">
+                                        <div class="col-sm-5"><h4>Дисплей</h4></div>
+                                        <div class="col-sm-5 col-xs-11"><select class="ml-opt-value">
+                                            <option value="1" selected>Цветной</option>
+                                            <option value="2">Монохромный</option>
+                                        </select></div>
+                                        <div class="col-sm-1 col-xs-1 ml-opt-action"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
+                                    </div>
+                                    <div class="ml-opt-box col-sm-6 clearfix">
+                                        <div class="col-sm-10 col-xs-11"><h4>Добавочный фитинг</h4></div>
+                                        <div class="col-sm-1 col-xs-1 ml-opt-action"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="ml-opt-box col-sm-6 clearfix">
+                                        <div class="col-sm-5"><h4>Hard-Drive</h4></div>
+                                        <div class="col-sm-5 col-xs-11"><select class="ml-opt-value">
+                                            <option value="1" selected>8 Gb</option>
+                                            <option value="2">16 Gb</option>
+                                            <option value="3">32 Gb</option>
+                                        </select></div>
+                                        <div class="col-sm-1 col-xs-1 ml-opt-action"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                                <div class="row ml-not-checked-option-list">
+                                    <div class="list-group col-sm-8 col-sm-offset-2">
+                                        <h4 class="list-group-item active">Список опций для добавления</h4>
+                                        <button type="button" class="list-group-item">Помпа</button>
+                                        <button type="button" class="list-group-item">Кейс транспортировачный</button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                        </div>
+                    <div class="row form-control-btn">
+                            <div class="form-group col-sm-2 col-sm-offset-10">
+                                <a role="button" href="#path/to/catalogView" class="btn btn-warning btn-block">Закрыть</a>
+                            </div>
+                        </div>
+                </div>
+                <!--</div>-->
+            </section>
+        </main>
+    </section>
+    <footer id="footer">Copyright &copy 2010-2017. Разработал Манузин Антон <i class="fa fa-arrow-right" aria-hidden="true"></i> "CSeal" 19mann84@gmail.com. Все права защищены.</footer>
+</div>
+<script src="../js/lib/jquery-3.2.1.js"></script>
+<script src="../js/lib/jquery-migrate-1.4.1.min.js"></script>
+<script src="../js/lib/jquery-migrate-3.0.0.min.js"></script>
+<script src="../js/lib/bootstrap.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

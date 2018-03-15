@@ -1,0 +1,50 @@
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-header-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="METROLAB"></a>
+                <form class="form-inline navbar-form navbar-left" name="auth" action="" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="login" placeholder="Логпн">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="Пароль">
+                    </div>
+                    <button type="submit" class="btn btn-default"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>Войти</button>
+                    <div id="auth-data-reset" class="form-group"><a href="#">Забыли пароль?</a><a href="#">Забыли логин?</a></div>
+                    <div id="registration"><a href="#"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>Зарегестрироватся</a></div>
+                </form>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse row" id="site-header-navbar-collapse">
+                <div class="col-sm-4 col-md-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Поиск...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </span>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-9">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ng-repeat="mainMenu in mainTemplate.head.mainMenus" ng-init="isOpen = false" ng-class="{dropdown: mainMenu.haveDropDownMenu, open: {{mainMenu.haveDropDownMenu}} && isOpen}" ng-click="isOpen = !isOpen" ng-switch on="mainMenu.haveDropDownMenu">
+                            <a ng-switch-when="true" ng-class="['btn', 'btn-default', 'dropdown-toggle', {active: mainMenu.mayBeActive && mainMenu.active}]" ng-focus="mainMenu.active = true" ng-blur="mainMenu.active = false" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="{{isOpen}}" role="button">{{mainMenu.title}}<b class="caret"></b></a>
+                            <ul ng-switch-when="true" class="dropdown-menu menu-head">
+                                <li ng-repeat="dropdownMenu in mainMenu.dropdownMenus">
+                                  <a href="#{{dropdownMenu.url}}" ng-bind="dropdownMenu.title" ng-click="changeContent(dropdownMenu)"></a>
+                                </li>
+                            </ul>
+                            <a ng-switch-default ng-class="['btn', 'btn-default', {active: mainMenu.active}]" ng-blur="mainMenu.active = false" href="#{{mainMenu.url}}" ng-click="changeContent(mainMenu)" ng-bind="mainMenu.title"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>

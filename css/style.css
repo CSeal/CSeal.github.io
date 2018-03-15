@@ -1,0 +1,765 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    min-width: 320px;
+    margin-bottom: 50px;
+    background-image: url("../images/bg1.jpg");
+}
+body > div.container-fluid {
+    padding: 0;
+}
+
+header#head > nav {
+    border-bottom: 3px solid #ed3937;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0 7px 13px 5px #1558a0;
+    -webkit-box-shadow: 0 7px 13px 5px #1558a0;
+    -moz-box-shadow: 0 7px 13px 5px #1558a0;
+    filter: progid:DXImageTransform.Microsoft.shadow(direction=180, color=#1558a0, strength=5);
+}
+
+header#head > nav > div.container-fluid {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#135299+0,2993e5+95,2993e5+95,2993e5+100 */
+    background: rgb(19, 82, 153); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(19, 82, 153, 1) 0%, rgba(41, 147, 229, 1) 95%, rgba(41, 147, 229, 1) 95%, rgba(41, 147, 229, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(19, 82, 153, 1) 0%, rgba(41, 147, 229, 1) 95%, rgba(41, 147, 229, 1) 95%, rgba(41, 147, 229, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(19, 82, 153, 1) 0%, rgba(41, 147, 229, 1) 95%, rgba(41, 147, 229, 1) 95%, rgba(41, 147, 229, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#135299', endColorstr='#2993e5', GradientType=0); /* IE6-9 */
+}
+
+header#head div.navbar-header > button.navbar-toggle {
+    border: none;
+    background-color: #489de4;
+}
+
+header#head div.navbar-header > button.navbar-toggle:hover {
+    background-color: #00afef;
+}
+
+header#head div.navbar-header > button.navbar-toggle:hover > span {
+    background-color: #b8525f;
+}
+
+header#head div.navbar-header > button.navbar-toggle > span {
+    background-color: #0f0f0f;
+}
+
+header#head div.navbar-header {
+    min-height: 120px;
+}
+
+header#head div.navbar-header a.navbar-brand > img {
+    height: 90px;
+}
+
+header#head div.navbar-header form button[type='submit'] {
+    color: #2587d7;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+
+header#head div.navbar-header form button[type='submit'] > i.fa {
+    color: #ed3937;
+    margin-right: 3px;
+}
+
+header#head div#registration {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+header#head div#registration > a {
+    color: #33ce3f;
+}
+
+header#head div#registration i.fa{
+    margin-right: 3px;
+}
+
+header#head div#registration > a:hover {
+    text-decoration: none;
+    border-bottom: 4px solid #33ce3f;
+}
+
+header#head div#site-header-navbar-collapse i.fa {
+    color: #489de4;
+}
+
+div#auth-data-reset {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div#auth-data-reset > a {
+    color: #ffffff;
+    display: block;
+}
+
+div#site-header-navbar-collapse ul > li > a {
+    text-transform: capitalize;
+    color: #0f0f0f;
+}
+
+div#site-header-navbar-collapse ul.nav.navbar-nav > li > a {
+    padding: 4px;
+    background-color: #489de4;
+    background-image: none;
+    border: 3px solid #00afef;
+    border-radius: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+div#site-header-navbar-collapse ul.nav.navbar-nav > li > a:nth-child(n + 1) {
+    margin-left: 5px;
+}
+
+div#site-header-navbar-collapse ul.nav.navbar-nav > li > a:not(.active):hover {
+    color: #a23333;
+    border-color: #a23333;
+    box-shadow: 0 0 4px 4px rgb(0, 175, 239);
+    -webkit-box-shadow: inset 0 0 4px 4px rgb(0, 175, 239);
+    -moz-box-shadow: inset 0 0 4px 4px rgb(0, 175, 239);
+    filter: progid:DXImageTransform.Microsoft.shadow(direction=45, color=rgb(0, 175, 239), strength=4);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+div#site-header-navbar-collapse ul.nav.navbar-nav > li > a.active {
+    box-shadow: inset 0 0 10px 5px rgb(0, 175, 239);
+    -webkit-box-shadow: inset 0 0 10px 5px rgb(0, 175, 239);
+    -moz-box-shadow: inset 0 0 10px 5px rgb(0, 175, 239);
+    filter: progid:DXImageTransform.Microsoft.shadow(direction=45, color=rgb(0, 175, 239), strength=10);
+    text-shadow: 1px 1px 2px rgb(0, 175, 239), 0 2px 1em #ed3937;
+    color: #a23333;
+}
+
+header#head div#site-header-navbar-collapse ul.dropdown-menu.menu-head > li > a {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #fbd4d4;
+    font-size: 1.2em;
+    transition: all .2s ease-out 0s;
+    -webkit-transition: all .2s ease-out 0s;
+    -moz-transition: all .2s ease-out 0s;
+    -ms-transition: all .2s ease-out 0s;
+    -o-transition: all .2s ease-out 0s;
+}
+
+header#head div#site-header-navbar-collapse ul.dropdown-menu.menu-head {
+    border-radius: 20px;
+    background-color: #1860aa;
+}
+/*CONTENT*/
+main{
+    background-color: #f0ffff;
+    border-radius: 15px;
+}
+main > section#center{
+    margin-bottom: 10px;
+}
+
+main.equipment-list .table-responsive > .table{
+    width: 1140px;
+}
+
+main.equipment-list > section#center{
+    position: relative;
+}
+main.equipment-list > section#center > .ml-table-countrecord-view{
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+main.equipment-group-list > section#center .ml-addbtn{
+    margin-bottom: 10px;
+}
+main.equipment-group-list > section#center #equipmentGroupUnitList > tbody > tr:hover{
+    cursor: auto;
+}
+main > section#center  table > tbody >tr{
+    border-bottom: 3px solid  #3db7ff;
+}
+
+main > section#center  table > tbody >tr > td, main > section#center  table > thead >tr > th{
+    text-align: center;
+    vertical-align: middle;
+}
+
+main > section#center  table > thead >tr{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.1em;
+}
+main > section#center  table > thead >tr.ml-tablehead-colcaption{
+    background: #a5ddff; /* Old browsers */
+    background: -moz-linear-gradient(top, #a5ddff 39%, #77cdff 66%, #3db7ff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a5ddff 39%,#77cdff 66%,#3db7ff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a5ddff 39%,#77cdff 66%,#3db7ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5ddff', endColorstr='#3db7ff',GradientType=0 ); /* IE6-9 */
+}
+main > section#center  table > thead >tr i.fa{
+    margin-left: 3px;
+}
+main > section#center  table > thead >tr > th.ml-tablehead-clicked:hover{
+    cursor: pointer;
+}
+main > section#center  table > thead >tr > th.ml-tablehead-clicked:hover > span,
+main > section#center  table > thead >tr > th.ml-tablehead-clicked:hover > i.fa
+{
+    color: #a23333;
+}
+
+main > section#center  table > thead > tr.ml-tablehead-filterpanel  .ml-filterelem-decor, .panel-body select{
+    width: 100%;
+    padding: 6px 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -moz-transition:  border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -ms-transition:  border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+}
+
+main > section#center  table > thead > tr.ml-tablehead-filterpanel input:focus{
+    border-color: #66afe9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    outline: 0;
+}
+main > section#center  table > thead > tr.ml-tablehead-filterpanel > th:first-child{
+    width: 70px;
+}
+
+main > section#center  table > thead > tr.ml-tablehead-filterpanel > th.list-on-input-change > div{
+    position: relative;
+}
+main > section#center  table > thead > tr.ml-tablehead-filterpanel > th.list-on-input-change > div > div{
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    height: auto;
+    max-height: 19em;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-transition: color 0.5s ease-in-out 0s;
+    -moz-transition: color 0.5s ease-in-out 0s;
+    -ms-transition: color 0.5s ease-in-out 0s;
+    -o-transition: color 0.5s ease-in-out 0s;
+    transition: color 0.5s ease-in-out 0s;
+}
+main > section#center  table > thead > tr.ml-tablehead-filterpanel > th.list-on-input-change ul{
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+main > section#center  table > thead > tr.ml-tablehead-filterpanel > th.list-on-input-change ul >li{
+    list-style-type: none;
+    cursor: pointer;
+    padding: 0 5px;
+}
+main > section#center  table > thead > tr.ml-tablehead-filterpanel > th.list-on-input-change ul >li:hover{
+    background-color: #77cdff;
+    color: #a23333;
+}
+main > section#center  table > thead > tr.ml-tablehead-filterpanel > th.ml-tablehead-action{
+    width: 20px;
+}
+main > section#center  table > tbody >tr:hover,
+main > section#center  table > tbody >tr.ml-tablebodyrow-action
+{
+    background-color: #fbe7d4;
+    cursor: pointer;
+}
+main > section#center  table > tbody >tr a{
+    color: #a23333;
+    font-weight: 600;
+}
+
+main > section#center  table > tbody >tr > td.ml-tablebody-remove > i.fa{
+    opacity: 0;
+    color: rgba(119, 119, 119, 0.67);
+    -webkit-transition: color .5s ease-out;
+    -moz-transition:  color .5s ease-out;
+    -ms-transition:  color .5s ease-out;
+    -o-transition:  color .5s ease-out;
+    transition:  color .5s ease-out;
+}
+main > section#center  table > tbody >tr:hover > td.ml-tablebody-remove > i.fa,
+main > section#center  table > tbody >tr:focus > td.ml-tablebody-remove > i.fa,
+main > section#center  table > tbody >tr.ml-tablebodyrow-action > td.ml-tablebody-remove > i.fa
+{
+    opacity: 1;
+}
+
+main > section#center  table > tbody td.ml-tablebody-remove:hover > i.fa{
+    color: #ed3937;
+}
+main > section#center  table > tbody td.ml-tablebody-remove > i.fa:hover{
+    cursor: pointer;
+}
+
+main > section#center  table > tbody p.ml-tablebody-measureerror{
+    white-space: nowrap;
+}
+main > section#center  table > tbody p:last-of-type.ml-tablebody-measureerror{
+    margin-bottom: 0;
+}
+main > section#center > div.ml-table-controlpanel > div{
+    display: inline-block;
+}
+main > section#center > div.ml-table-controlpanel > div > *,
+main > section#center > div.ml-table-controlpanel > *
+{
+    margin: 5px 10px;
+}
+main > section#center > div.ml-table-controlpanel > div > span,
+main > section#center span.ml-toggle-menu
+{
+    margin-left: 6px;
+    color: #ed3937;
+    font-size: 1.3em;
+    border-bottom: 2px solid #ed3937;
+}
+main > section#center > div.ml-table-controlpanel > div > span > i.fa{
+    margin-left: 5px;
+}
+main > section#center span.ml-toggle-menu > span.glyphicon
+{
+    font-weight: 800;
+}
+main > section#center > div.ml-table-controlpanel > div > span:hover
+{
+    cursor: pointer;
+}
+div#selectCriterion > div.panel >div:first-child,
+div#selectFilters > div.panel >div:first-child{
+    text-align: center;
+}
+main > section#center > div.ml-table-countrecord-view > span.label-primary{
+    padding-top: 5px;
+}
+ main > header.page-header {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: #0f0f0f;
+    text-transform: capitalize;
+    text-align: center;
+}
+main > section#center a.ml-addbtn{
+    color: #2587d7;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+#basicCharacteristic h3, #measureError h3, #option-characteristic h3, .ml-not-checked-option-list h4{
+    text-align: center;
+}
+
+.ml-not-checked-option-list button{
+    outline:none;
+}
+
+.ml-not-checked-option-list button:hover{
+    background-color: #fbe7d4;
+}
+.ml-not-checked-option-list > div{
+    padding-right: unset;
+}
+
+#basicCharacteristic h3{
+    border-bottom: 1px solid #ddd; /*#0f0f0f*/
+}
+main > section#center .ml-opt-action > i.fa{
+    color: rgba(119, 119, 119, 0.67);
+}
+main > section#center .ml-opt-action > i.fa:hover, main > section#center .ml-opt-action > i.fa:focus{
+    cursor: pointer;
+    color: #ed3937;
+    -webkit-transition: color .5s ease-out;
+    -moz-transition:  color .5s ease-out;
+    -ms-transition:  color .5s ease-out;
+    -o-transition:  color .5s ease-out;
+    transition:  color .5s ease-out;
+}
+
+main > section#center .ml-opt-box{
+    padding: unset;
+}
+
+td.ml-tablebody-checked >  i.fa,
+a.ml-addbtn > i.fa{
+    color: #24902c;
+}
+a.ml-addbtn > i.fa{
+    margin-right: 5px;
+}
+nav.ml-table-pagination{
+    text-align: center;
+}
+
+main.equipment-card .nav-tabs > li.active > a,
+main.equipment-group .nav-tabs > li.active > a
+{
+    color: #fff;
+    background-color: #337AB7;
+}
+#equgrBasicInfo div.row > div{
+    text-align: center;
+}
+
+.form-control-btn{
+ margin-top: 30px;
+}
+.tab-content{
+    margin-top: 10px;
+}
+
+main > section#center #workingSITCollection .row{
+    margin-left: -10px;
+    margin-right: -10px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #e5edf1;
+    margin-top: 20px;
+    position: relative;
+}
+
+main > section#center #workingSITCollection .row > i.fa{
+     /*font-size: 2em;*/
+     color: rgba(150, 39, 39, 0.67);
+     position: absolute;
+     top: 7px;
+     right: 5px;
+    -webkit-transition: color .5s ease-out;
+    -moz-transition:  color .5s ease-out;
+    -ms-transition:  color .5s ease-out;
+    -o-transition:  color .5s ease-out;
+    transition:  color .5s ease-out;
+ }
+main > section#center #workingSITCollection .row > i.fa:hover{
+    color: #ed3937;
+    cursor: pointer;
+}
+
+main > section#center div#filterCharacteristic span.ml-toggle-menu,
+main > section#center div#filterOptions span.ml-toggle-menu{
+    border-bottom-style: dashed;
+    font-size: 1.1em;
+}
+main > section#center div#filterCharacteristic span.ml-toggle-menu{
+    color: #2587d7;
+}
+main > section#center div#filterOptions span.ml-toggle-menu{
+    color: #24902c;
+}
+
+main > section#center div#filterCharacteristic span.badge{
+    background-color: #337ab7;
+}
+main > section#center div#filterOptions  span.badge{
+    background-color: #188020;
+}
+ml-tablehead-measuring-margin-right
+main > section#center div#selectRezults{
+    position: relative;
+}
+
+main > section#center div#selectRezults i.ml-toogle-chart{
+    position: absolute;
+    color: #279a30;
+    top: 5px;
+    right: 25px;
+    -webkit-transition: color .5s ease-out;
+    -moz-transition:  color .5s ease-out;
+    -ms-transition:  color .5s ease-out;
+    -o-transition:  color .5s ease-out;
+    transition:  color .5s ease-out;
+}
+main > section#center div#selectRezults i.ml-toogle-chart:hover{
+cursor: pointer;
+color: #188020;
+}
+main > section#center div#selectRezults span.ml-toggle-menu
+{
+    cursor: pointer;
+    color: #d58512;
+    border-bottom-color: #d58512;
+}
+
+main > section#center div#selectRezults span.ml-toggle-menu > i.fa,
+main > section#center div#selectFilters > div.panel span.ml-toggle-menu > i.fa,
+main > section#center div#selectCriterion > div.panel span.ml-toggle-menu > i.fa{
+    margin-right: 5px;
+}
+main > section#center div#selectFilters span.ml-toggle-menu > i.fa,
+main > section#center div#selectFilters div.checkbox span.badge
+{
+    margin-left: 5px;
+}
+
+main > section#center div#selectRezults div.ml-gauge-SIT-collection > div{
+    position: relative;
+    background-color: #e5edf1;
+    border-radius: 15px;
+    padding-top: 1px;
+    margin-bottom: 10px;
+}
+main > section#center div.ml-gauge-SIT-collection tr{
+    background-color: #ffffff;
+}
+main > section#center div#selectRezults div.ml-gauge-SIT-collection > div > h4{
+    margin-left: 5px;
+}
+main > section#center div#selectRezults div.ml-gauge-SIT-collection > div > h4 + div{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+main > section#center div#selectRezults div.ml-gauge-SIT-collection > div > h4 + div > a:hover,
+main > section#center div#selectRezults div.ml-gauge-SIT-collection > div > h4 + div > i:hover{
+    cursor: pointer;
+}
+
+main > section#center div#selectRezults div.ml-gauge-SIT-collectionn i.ml-toggle-option-characteristic-list{
+    color: #ed3937;
+    margin-left: 2px;
+}
+
+main > section#center div#selectRezults div.ml-gauge-SIT-collection i.ml-toggle-option-characteristic-list:hover{
+    color: rgba(150, 39, 39, 0.67);
+}
+
+main > section#center div#selectRezults div.ml-gauge-SIT-collection ul.ml-characteristic-list > li{
+    color: #337ab7;
+}
+
+main > section#center div#selectRezults div.ml-gauge-SIT-collection ul.ml-options-list > li{
+    color: #188020;
+}
+
+main > section#center div#selectRezults div.ml-gauge-SIT-collection ul > li:first-child{
+    color: #d58512;
+}
+
+main > section#center div#selectRezults div.ml-gauge-SIT-collection ul.ml-characteristic-list > li > i,
+main > section#center div#selectRezults div.ml-gauge-SIT-collection ul.ml-options-list > li > i{
+    color: #ed3937;
+    margin: 0 .2em;
+}
+main > section#center div#selectRezults canvas.ml-chart-SIT{
+    width: 100%;
+}
+
+main > section#center div#selectRezults div.panel-heading  span.ml-toggle-menu > br{
+    display: none;
+}
+
+/*FOOTER*/
+footer#footer {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 320px;
+    padding: .5em 0;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    background-color: #2993e5;
+    border-top: 3px solid #227fce;
+    border-bottom: 3px solid #227fce;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+
+
+footer#footer > span.glyphicon-arrow-right {
+    font-size: smaller;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+@media only screen and (max-width: 767px) {
+    header#head div.navbar-header > form.navbar-form {
+        border: none;
+        margin-left: 105px;
+        margin-right: 70px;
+    }
+
+    div#site-header-navbar-collapse {
+        border: none;
+    }
+
+    div#site-header-navbar-collapse ul.nav.navbar-nav > li > a {
+        padding: 8px;
+        border-radius: 4px;
+        margin: 5px 0;
+        font-size: 20px;
+    }
+
+    div#site-header-navbar-collapse ul.nav.navbar-nav > li > a.active {
+        box-shadow: inset 0 0 10px 15px rgb(0, 175, 239);
+        -webkit-box-shadow: inset 0 0 10px 5px rgb(0, 175, 239);
+        -moz-box-shadow: inset 0 0 10px 5px rgb(0, 175, 239);
+        filter: progid:DXImageTransform.Microsoft.shadow(direction=45, color=rgb(0, 175, 239), strength=10);
+    }
+
+    header#head div#site-header-navbar-collapse ul.dropdown-menu.menu-head {
+        margin-left: 6.5%;
+        margin-right: 5%;
+        border-radius: 10px;
+    }
+
+    header#head div#site-header-navbar-collapse ul.dropdown-menu.menu-head > li > a {
+        color: #d4fbd7;
+        font-size: 1.4em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    main.equipment-list,
+    #equgrOptionCharacteristic div.table-responsive
+    {
+        padding: 0;
+    }
+
+    main *.table-responsive{
+        border: 0;
+    }
+    section#content > main.container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    main.equipment-list .table-responsive > .table >thead > tr > th,
+    main.equipment-list .table-responsive > .table > tbody > tr > th,
+    main.equipment-list .table-responsive > .table > tfoot > tr > th,
+    main.equipment-list .table-responsive > .table > thead > tr > td,
+    main.equipment-list .table-responsive > .table > tbody > tr > td,
+    main.equipment-list .table-responsive > .table > tfoot > tr > td{
+        white-space: normal;
+    }
+    main.equipment-list > section#center > .ml-table-countrecord-view{
+        position: static;
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+    main.equipment-card button, main.equipment-card a[role=button]{
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.3333333;
+        border-radius: 6px;
+    }
+    main > section#center .ml-opt-box{
+        margin-bottom: 1em;
+        padding-right: 15px;
+    }
+
+    main > section#center div#equgrOptionCharacteristic div.table-responsive:first-child{
+    max-height: 30em;
+    overflow-y: auto;
+}
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    header#head > nav > div.container-fluid {
+        position: relative;
+    }
+
+    header#head div.navbar-header > form {
+        padding: 0;
+    }
+
+    div#site-header-navbar-collapse {
+        position: absolute;
+        left: 88px;
+        top: 78px;
+    }
+
+    header#head div#site-header-navbar-collapse ul.dropdown-menu.menu-head > li > a:hover {
+        color: #d4fbd7;
+        font-size: 1.4em;
+        font-weight: 600;
+        background: none;
+    }
+    main > section#center table > thead > tr > th.ml-tablehead-action{
+        width: 20px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    header#head div.navbar-header > div.clearfix {
+        height: 110px;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    header#head div#registration > a {
+        position: relative;
+    }
+
+    header#head div#registration > a > span {
+        position: absolute;
+        left: -1.2em;
+    }
+
+/*    nav.ml-table-pagination{
+
+    }*/
+}
+@media only screen and (max-width: 450px){
+    main > section#center div#selectRezults div.panel-heading span.ml-toggle-menu > br{
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 403px) {
+    header#head div.navbar-header form button[type='submit'] {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (min-width: 390px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (max-width: 991px) {
+    div#selectCriterion > div.panel >div:first-child,
+    div#selectFilters > div.panel >div:first-child{
+        text-align: left;
+    }
+    main > section#center span.ml-toggle-menu
+    {
+        cursor: pointer;
+    }
+}
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
